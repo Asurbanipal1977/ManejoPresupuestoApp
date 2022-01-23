@@ -1,0 +1,92 @@
+﻿@using System.ComponentModel.DataAnnotations;
+@using System.ComponentModel;
+@model IEnumerable<TipoCuenta>
+@{
+    ViewData["Title"] = "Tipos Cuentas";
+}
+
+<h1>Tipos de cuentas</h1>
+<hr />
+<h5>Se refiere a cómo vamos a agrupar las cuentas: Préstamos, tarjeta de crédito</h5>
+
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+<table class="table">
+    <thead>
+        <tr>
+        @{
+                TipoCuenta tipoCuenta = new TipoCuenta();
+                var lstExcepts = tipoCuenta.GetType().GetProperties().Where(x=>x.Name=="Orden");
+                foreach (var elem in tipoCuenta.GetType().GetProperties().Except(lstExcepts))
+                {
+                    var attr = (DisplayNameAttribute) elem.GetCustomAttributes(typeof(DisplayNameAttribute), false).FirstOrDefault();
+                    if (attr != null)
+                    {
+                        <th>@attr.DisplayName</th>
+                    }
+                    else
+                    {
+                        <th>@elem.Name</th>
+                    }
+                }
+                <th>Acciones</th>
+            }
+        </tr>
+    </thead>
+    <tbody id="reordenable">       
+        @foreach (var elemTipoCuenta in Model)
+        {
+            <tr>
+                <input type="hidden" asp-for="@elemTipoCuenta.Id" name="ids"/>
+            @foreach (var elem1 in elemTipoCuenta.GetType().GetProperties().Except(lstExcepts)) 
+            {
+                <td>@elem1.GetValue(elemTipoCuenta)</td>
+            }
+                <td>
+                    <a asp-action="Editar" class="btn btn-primary" asp-route-id="@elemTipoCuenta.Id">Editar</a>
+                    <a asp-action="Borrar" class="btn btn-danger" asp-route-id="@elemTipoCuenta.Id">Borrar</a>
+                </td>
+            </tr>
+        }                  
+    </tbody>
+</table>
+<a asp-action="Crear" asp-controller="TiposCuentas" class="btn btn-primary">Crear Nueva Cuenta</a>
+
+@section Scripts{
+    <script>
+        const urlOrdenar = '@Url.Action("Sort")';
+        $(() => {
+            $("#reordenable").sortable(
+                {
+                    //Cuando se acabe de arrastar, ejecuta una función.
+                    stop: async function (e, ui){
+                        await actualizarOrden();
+                    }
+                }
+            );
+        });
+
+        async function actualizarOrden()
+        {
+            const ids = obtenerIds();
+            await enviarIdsBD(ids);
+        }
+
+        function obtenerIds()
+        {
+            //Se recorre todos los elementos, obtiene su valor y lo transforma en un array.
+            return $('[name="ids"]').map(function (){return $(this).val()}).get();
+        }
+
+        //llamada mediante fetch
+        async function enviarIdsBD(ids)
+        {
+            const response = await fetch(urlOrdenar, {
+                method: 'POST', // *GET, POST, PUT, DELETE, etc       
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(ids) // body data type must match "Content-Type" header
+            });
+        }
+    </script>
+}

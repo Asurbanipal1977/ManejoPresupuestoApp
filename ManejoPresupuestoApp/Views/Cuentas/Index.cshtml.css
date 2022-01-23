@@ -1,0 +1,41 @@
+﻿#cuentas-accordion{
+    margin-bottom:50px;
+}
+
+#cuentas-accordion button {
+    color: black !important;
+    font-size: 18px;
+}
+
+    #cuentas-accordion button > span {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+.activo {
+    color: blue
+}
+
+.pasivo {
+    color: red
+}
+
+.list-group-item p {
+    display: flex;
+}
+
+.list-group-item span {
+    width:100%;
+    padding: 10px;
+}
+
+
+.list-group-item span.der {
+    text-align:right;
+}
+
+.list-group-item span.izq {
+    text-align: left;
+}
+
