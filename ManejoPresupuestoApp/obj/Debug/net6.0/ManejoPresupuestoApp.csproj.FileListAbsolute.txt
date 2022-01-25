@@ -60,3 +60,10 @@ D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\obj\Debug\net6.0\ManejoP
 D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\obj\Debug\net6.0\scopedcss\Views\Cuentas\Index.cshtml.rz.scp.css
 D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\bin\Debug\net6.0\AutoMapper.dll
 D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\obj\Debug\net6.0\ManejoPresupuestoApp.csproj.GenerateResource.cache
+D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\bin\Debug\net6.0\en-US\ManejoPresupuestoApp.resources.dll
+D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\bin\Debug\net6.0\es-ES\ManejoPresupuestoApp.resources.dll
+D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\obj\Debug\net6.0\ManejoPresupuestoApp.Resources.SharedResource.en-US.resources
+D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\obj\Debug\net6.0\ManejoPresupuestoApp.Resources.SharedResource.es-ES.resources
+D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\obj\Debug\net6.0\en-US\ManejoPresupuestoApp.resources.dll
+D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\obj\Debug\net6.0\es-ES\ManejoPresupuestoApp.resources.dll

@@ -14,6 +14,14 @@
         },
         "runtime": {
           "ManejoPresupuestoApp.dll": {}
+        },
+        "resources": {
+          "en-US/ManejoPresupuestoApp.resources.dll": {
+            "locale": "en-US"
+          },
+          "es-ES/ManejoPresupuestoApp.resources.dll": {
+            "locale": "es-ES"
+          }
         }
       },
       "AutoMapper/11.0.0": {

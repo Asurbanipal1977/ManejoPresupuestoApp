@@ -1,0 +1,52 @@
+﻿@using System.ComponentModel.DataAnnotations;
+@using System.ComponentModel;
+@model IEnumerable<Categoria>
+@{
+    ViewData["Title"] = "Listado de Categorías";
+}
+
+<h1>Categorías</h1>
+<hr />
+<h5>De dónde provienen nuestros ingresos y en que gastamos nuestro dinero</h5>
+
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+<table class="table">
+    <thead>
+        <tr>
+        @{
+                Categoria categoria = new Categoria();
+                var lstExcepts = categoria.GetType().GetProperties().Where(x=>x.Name=="UsuarioId");
+                foreach (var elem in categoria.GetType().GetProperties().Except(lstExcepts)) 
+                {
+                    var attr = (DisplayNameAttribute) elem.GetCustomAttributes(typeof(DisplayNameAttribute), false).FirstOrDefault();
+                    if (attr != null)
+                    {
+                        <th>@attr.DisplayName</th>
+                    }
+                    else
+                    {
+                        <th>@elem.Name</th>
+                    }
+                }
+                <th>Acciones</th>
+            }
+        </tr>
+    </thead>
+    <tbody>       
+        @foreach (var elemCategoria in Model)
+        {
+            <tr>
+                <input type="hidden" asp-for="@elemCategoria.Id" name="ids"/>
+            @foreach (var elem1 in categoria.GetType().GetProperties().Except(lstExcepts)) 
+            {
+                <td>@elem1.GetValue(elemCategoria).ToString()</td>
+            }
+                <td>
+                    <a asp-action="Editar" class="btn btn-primary" asp-route-id="@elemCategoria.Id">Editar</a>
+                    <a asp-action="Borrar" class="btn btn-danger" asp-route-id="@elemCategoria.Id">Borrar</a>
+                </td>
+            </tr>
+        }                  
+    </tbody>
+</table>
+<a asp-action="Crear" asp-controller="Categorias" class="btn btn-primary">Crear Nueva Categoría</a>
