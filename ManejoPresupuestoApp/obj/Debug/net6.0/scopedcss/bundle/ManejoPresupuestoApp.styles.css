@@ -14,14 +14,6 @@
         width: 100%;
     }
 
-.activo[b-xy07oywnlx] {
-    color: blue
-}
-
-.pasivo[b-xy07oywnlx] {
-    color: red
-}
-
 .list-group-item p[b-xy07oywnlx] {
     display: flex;
 }
@@ -88,4 +80,9 @@ button.accept-policy[b-c7dokknnta] {
   width: 100%;
   white-space: nowrap;
   line-height: 60px;
+}
+/* _content/ManejoPresupuestoApp/Views/Shared/_ReporteTransaccionesDetalladas.cshtml.rz.scp.css */
+.colorFila[b-uosxrt5pd5] {
+    background-color: lightblue;
+    font-size: 26px;
 }

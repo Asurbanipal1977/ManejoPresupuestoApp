@@ -16,7 +16,7 @@ namespace ManejoPresupuestoApp.Models
 
         [Required(ErrorMessageResourceType = typeof(SharedResource), ErrorMessageResourceName = "Required"),
          DataType(DataType.Currency, ErrorMessage = "No es una cantidad correcta")]
-        [Range(1, int.MaxValue, ErrorMessageResourceName = "Range", 
+        [Range(0, Double.MaxValue, ErrorMessageResourceName = "Range", 
             ErrorMessageResourceType = typeof(SharedResource))]
         [RegularExpression(@"^\d+([.|,]\d+)?$", ErrorMessageResourceType = typeof(SharedResource), ErrorMessageResourceName = "Number")]
         public decimal Monto { get; set; }
@@ -31,5 +31,11 @@ namespace ManejoPresupuestoApp.Models
 
         [StringLength(maximumLength:100,ErrorMessage = "La nota no puede superar los {1} caracteres")]
         public string Nota { get; set; }
+
+        [Display(Name = "Tipo de Operación")]
+        public TipoOperacion TipoOperacionId { get; set; } = TipoOperacion.Ingreso;
+
+        public string Categoria { get; set; }
+        public string Cuenta { get; set; }
     }
 }

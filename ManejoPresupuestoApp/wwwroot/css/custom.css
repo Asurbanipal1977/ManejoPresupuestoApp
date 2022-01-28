@@ -8,3 +8,11 @@
     justify-content:space-around;
     font-size:26px;
 }
+
+.activo {
+    color: blue
+}
+
+.pasivo {
+    color: red
+}

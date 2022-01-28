@@ -10,18 +10,25 @@ namespace ManejoPresupuestoApp.Controllers
     {
         private readonly IRepositoriosTiposCuentas _repositoriosTiposCuentas;
         private readonly IRepositoriosCuentas _repositoriosCuentas;
+        private readonly IRepositoriosTransacciones _repositoriosTransacciones;
         private readonly IServiciosUsuarios _serviciosUsuarios;
+        private readonly IServiciosReporte _serviciosReporte;
+
         private readonly IMapper _mapper;
 
         public CuentasController (IRepositoriosTiposCuentas repositoriosTiposCuentas,
                                     IRepositoriosCuentas repositoriosCuentas,
                                     IServiciosUsuarios serviciosUsuarios,
+                                    IRepositoriosTransacciones repositoriosTransacciones,
+                                    IServiciosReporte serviciosReporte,
                                     IMapper mapper)
         {
             _repositoriosTiposCuentas = repositoriosTiposCuentas;
             _repositoriosCuentas = repositoriosCuentas;
             _serviciosUsuarios = serviciosUsuarios;
+            _repositoriosTransacciones = repositoriosTransacciones;
             _mapper = mapper;
+            _serviciosReporte = serviciosReporte;
         }
 
 
@@ -140,5 +147,19 @@ namespace ManejoPresupuestoApp.Controllers
 
             return RedirectToAction("Index");
         }
+
+        public async Task<IActionResult> Detalle(int id, int mes, int año)
+        {
+            var usuarioId = _serviciosUsuarios.ObtenerUsuarioId();
+            var cuenta = await _repositoriosCuentas.ConsultarPorId(id, usuarioId);
+            if (cuenta == null)
+                return RedirectToAction("NoEncontrado", "Home");
+
+            var modelo = await _serviciosReporte.ObtenerTransaccionesDetalladasPorCuenta(usuarioId, id, mes, año, ViewBag);
+            ViewBag.Cuenta = cuenta.Nombre;
+
+            return View(modelo);
+        }
+
     }
 }

@@ -67,3 +67,6 @@ D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\obj\Debug\net6.0\ManejoP
 D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\obj\Debug\net6.0\ManejoPresupuestoApp.Resources.SharedResource.es-ES.resources
 D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\obj\Debug\net6.0\en-US\ManejoPresupuestoApp.resources.dll
 D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\obj\Debug\net6.0\es-ES\ManejoPresupuestoApp.resources.dll
+D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\obj\Debug\net6.0\ManejoPresupuestoApp.Resources.Views.Home.Index.en-US.resources
+D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\obj\Debug\net6.0\ManejoPresupuestoApp.Resources.Views.Home.Index.es-ES.resources
+D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\obj\Debug\net6.0\scopedcss\Views\Shared\_ReporteTransaccionesDetalladas.cshtml.rz.scp.css

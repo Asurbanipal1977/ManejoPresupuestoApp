@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UQzPDoF2/o0NKprXyYRxQ511TriO1EZP8hOD1Ei1u+s=",
+  "Hash": "XMNHx6WsBEdNmRTKWPy2JucukwM0CJFC47tBJ8ATEeA=",
   "Source": "ManejoPresupuestoApp",
   "BasePath": "_content/ManejoPresupuestoApp",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\000_Cursos\\ManejoPresupuestoApp\\ManejoPresupuestoApp\\wwwroot\\js\\formularioTransacciones.js",
+      "SourceId": "ManejoPresupuestoApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\000_Cursos\\ManejoPresupuestoApp\\ManejoPresupuestoApp\\wwwroot\\",
+      "BasePath": "_content/ManejoPresupuestoApp",
+      "RelativePath": "js/formularioTransacciones.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\formularioTransacciones.js"
     },
     {
       "Identity": "D:\\000_Cursos\\ManejoPresupuestoApp\\ManejoPresupuestoApp\\wwwroot\\js\\site.js",

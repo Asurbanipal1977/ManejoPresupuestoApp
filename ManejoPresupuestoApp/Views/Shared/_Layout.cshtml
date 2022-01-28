@@ -14,7 +14,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ManejoPresupuestoApp</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Transacciones" asp-action="Index">ManejoPresupuestoApp</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -22,7 +22,7 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Transacciones" asp-action="Index">Transacciones</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="TiposCuentas" asp-action="Index">Tipos Cuentas</a>
@@ -34,6 +34,13 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Categorias" asp-action="Index">Categorias</a>
                         </li>
                     </ul>
+                    <div class="ms-auto">
+                        <select class="form-control" id="langSelect">
+                            <option default>Idioma</option>
+                            <option value="ES">Español</option>
+                            <option value="EN">Ingles</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -53,6 +60,29 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+       $(document).ready(function () {
+            var culture = 
+                 window.location.href.split("?").length > 1 ? 
+                 window.location.href.split("?")[1] : "";
+            
+            if (culture != "") {
+                 var lang = culture.split("=")[1];
+                 if (lang == "es-ES") {
+                    $("#langSelect").val("ES");
+                 } else {
+                    $("#langSelect").val("EN");
+                 }
+            }
+       
+            $("#langSelect").change(function () {
+               var redirect = 
+                    $("#langSelect").val() == "EN" ? 
+                    "?culture=en-US" : "?culture=es-ES";
+                    window.location.href = redirect;
+            });
+       })
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

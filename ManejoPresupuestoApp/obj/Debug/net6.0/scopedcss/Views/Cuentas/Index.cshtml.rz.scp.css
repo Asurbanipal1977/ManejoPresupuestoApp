@@ -13,14 +13,6 @@
         width: 100%;
     }
 
-.activo[b-xy07oywnlx] {
-    color: blue
-}
-
-.pasivo[b-xy07oywnlx] {
-    color: red
-}
-
 .list-group-item p[b-xy07oywnlx] {
     display: flex;
 }

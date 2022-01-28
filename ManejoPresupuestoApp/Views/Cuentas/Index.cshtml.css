@@ -13,14 +13,6 @@
         width: 100%;
     }
 
-.activo {
-    color: blue
-}
-
-.pasivo {
-    color: red
-}
-
 .list-group-item p {
     display: flex;
 }

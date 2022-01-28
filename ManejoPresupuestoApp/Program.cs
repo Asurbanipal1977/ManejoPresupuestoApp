@@ -22,6 +22,8 @@ builder.Services.AddTransient<IRepositoriosTiposCuentas, RepositoriosTiposCuenta
 builder.Services.AddTransient<IRepositoriosCuentas, RepositoriosCuentas>();
 builder.Services.AddTransient<IRepositoriosCategorias, RepositoriosCategorias>();
 builder.Services.AddTransient<IRepositoriosTransacciones, RepositoriosTransacciones>();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddTransient<IServiciosReporte, ServiciosReporte>();
 builder.Services.AddAutoMapper(typeof(Program));
 var app = builder.Build();
 
@@ -57,6 +59,6 @@ app.UseRequestLocalization(localizationOptions);
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Transacciones}/{action=Index}/{id?}");
 
 app.Run();

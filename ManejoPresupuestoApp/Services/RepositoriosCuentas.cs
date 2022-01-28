@@ -60,7 +60,7 @@ namespace ManejoPresupuestoApp.Services
         public async Task<Cuenta> ConsultarPorId(int Id, int UsuarioId)
         {
             using var connection = new SqlConnection(_cadenaConexion);
-            return await connection.QueryFirstOrDefaultAsync<Cuenta>($@"SELECT c.Id, c.Nombre, tc.Nombre As TipoCuenta, Balance, Descripcion  from Cuentas c
+            return await connection.QueryFirstOrDefaultAsync<Cuenta>($@"SELECT c.Id, c.Nombre, tc.Nombre As TipoCuenta, c.TipoCuentaId, Balance, Descripcion  from Cuentas c
                                                             INNER JOIN TiposCuentas tc ON c.TipoCuentaId = tc.Id
                                                             WHERE tc.UsuarioId=@UsuarioId AND c.Id=@Id", new { Id, UsuarioId });
         }

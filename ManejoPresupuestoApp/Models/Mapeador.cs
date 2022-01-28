@@ -7,6 +7,7 @@ namespace ManejoPresupuestoApp.Models
         {
             //Nos permite mapear aunque el nombre de los campos cambie
             CreateMap<Cuenta, CuentaViewModel>();
+            CreateMap<Transaccion, TransaccionModificacionModel>();
         }
     }
 }

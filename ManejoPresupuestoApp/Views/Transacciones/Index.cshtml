@@ -1,0 +1,25 @@
+﻿@model TransaccionesDetalladas
+@{
+    ViewData["Title"] = "Transacciones";
+}
+
+<partial name="_SubMenu" model="SubMenuTransacciones.Diario"></partial>
+<h1>Transacciones</h1>
+<hr />
+<h5>Se refiere a las transacciones</h5>
+
+<div class="mb-3">
+    <a asp-action="Crear" class="btn-primary btn">Crear</a>
+</div>
+<h4>
+    <a asp-action="Index" asp-route-mes="@ViewBag.MesAnterior" asp-route-año="@ViewBag.AñoAnterior"
+    class="btn-secondary btn"
+    ><i class="bi-chevron-left"></i></a>
+    @Model.FechaInicio.ToString("MMMM")-@Model.FechaInicio.Year
+    <a asp-action="Index" asp-route-mes="@ViewBag.MesPosterior" asp-route-año="@ViewBag.AñoPosterior"
+    class="btn-secondary btn"
+    ><i class="bi-chevron-right"></i></a>
+</h4>
+
+
+<partial name="_ReporteTransaccionesDetalladas" model="Model"></partial>
