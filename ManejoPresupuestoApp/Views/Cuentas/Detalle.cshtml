@@ -6,14 +6,6 @@
 <h1>Movimientos @ViewBag.Cuenta</h1>
 <hr />
 
-<h4>
-    <a asp-action="Detalle" asp-route-mes="@ViewBag.MesAnterior" asp-route-año="@ViewBag.AñoAnterior"
-    class="btn-secondary btn"
-    ><i class="bi-chevron-left"></i></a>
-    @Model.FechaInicio.ToString("MMMM")-@Model.FechaInicio.Year
-    <a asp-action="Detalle" asp-route-mes="@ViewBag.MesPosterior" asp-route-año="@ViewBag.AñoPosterior"
-    class="btn-secondary btn"
-    ><i class="bi-chevron-right"></i></a>
-</h4>
+<partial name="_NavegarMeses" model="Model.FechaInicio"></partial>
 
 <partial name="_ReporteTransaccionesDetalladas" model="Model"></partial>

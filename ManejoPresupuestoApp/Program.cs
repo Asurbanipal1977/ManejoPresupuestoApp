@@ -1,3 +1,4 @@
+using ClosedXML.Excel;
 using ManejoPresupuestoApp.Services;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
@@ -25,6 +26,8 @@ builder.Services.AddTransient<IRepositoriosTransacciones, RepositoriosTransaccio
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddTransient<IServiciosReporte, ServiciosReporte>();
 builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddTransient<IXLWorkbook,XLWorkbook>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

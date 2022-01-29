@@ -12,6 +12,7 @@ namespace ManejoPresupuestoApp.Services
         Task Crear(Transaccion transaccion);
         Task<int> Modificar(Transaccion transaccion, decimal montoAnterior, int cuentaIdAnterior);
         Task<IEnumerable<Transaccion>> ObtenerPorCuentaId(TransaccionesPorCuentaModel modelo);
+        Task<IEnumerable<TransaccionesPorMes>> ObtenerPorMes(int usuarioId, int año);
         Task<IEnumerable<TransaccionesPorSemana>> ObtenerPorSemana(TransaccionesPorUsuarioModel modelo);
         Task<IEnumerable<Transaccion>> ObtenerPorUsuarioId(TransaccionesPorUsuarioModel modelo);
     }
@@ -101,7 +102,7 @@ namespace ManejoPresupuestoApp.Services
            (TransaccionesPorUsuarioModel modelo)
         {
             using var connection = new SqlConnection(_cadenaConexion);
-            return await connection.QueryAsync<Transaccion>($@"SELECT t.Id, t.FechaTransaccion, t.Monto, ca.Nombre as Categoria,
+            return await connection.QueryAsync<Transaccion>($@"SELECT t.Id, t.FechaTransaccion, t.Monto, t.Nota, ca.Nombre as Categoria,
                                                             cu.Nombre Cuenta, ca.TipoOperacionId from Transacciones t
                                                             INNER JOIN Categorias ca ON t.CategoriaId = ca.Id
                                                             INNER JOIN Cuentas cu ON t.CuentaId = cu.Id
@@ -117,7 +118,7 @@ namespace ManejoPresupuestoApp.Services
             using var connection = new SqlConnection(_cadenaConexion);
             return await connection.QueryAsync<TransaccionesPorSemana>($@"SELECT datediff (d,@FechaInicio,FechaTransaccion) / 7 +1
                                                             as Semana,
-                                                            Sum(Monto), cat.TipoOperacionId
+                                                            Sum(Monto) as Monto, cat.TipoOperacionId
                                                             FROM Transacciones t
                                                             inner join Categorias cat
                                                             on t.CategoriaId = cat.Id
@@ -126,5 +127,24 @@ namespace ManejoPresupuestoApp.Services
                                                             GROUP BY datediff (d,@FechaInicio,FechaTransaccion) / 7, cat.TipoOperacionId",
                                                             modelo);
         }
+
+        public async Task<IEnumerable<TransaccionesPorMes>> ObtenerPorMes
+           (int usuarioId, int año)
+        {
+            using var connection = new SqlConnection(_cadenaConexion);
+            return await connection.QueryAsync<TransaccionesPorMes>($@"select month(t.FechaTransaccion) as Mes,
+                    Sum(Monto) as Monto, cat.TipoOperacionId
+                    FROM Transacciones t
+                    inner join Categorias cat
+                    on t.CategoriaId = cat.Id
+                    WHERE year(FechaTransaccion)=@Año
+                    and t.UsuarioId = @UsuarioId
+                    GROUP BY month(t.FechaTransaccion), cat.TipoOperacionId", new
+                    {
+                        UsuarioId = usuarioId,
+                        Año = año
+                    });
+        }
+
     }
 }

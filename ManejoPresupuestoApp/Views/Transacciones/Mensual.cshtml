@@ -1,5 +1,16 @@
-﻿@{
+﻿@model TransaccionesReportePorMes
+@{
     ViewData["Title"] = "Reporte Mensual";
+
+    TransaccionesResumenTotal resumenTotal = new TransaccionesResumenTotal()
+    {
+        Ingresos = Model.Ingresos,
+        Gastos = Model.Gastos,
+        Total = Model.Total
+    };
+
+    int añoAnterior = Model.Año - 1;
+    int añoPosterior = Model.Año + 1;
 }
 
 <partial name="_SubMenu" model="SubMenuTransacciones.Mensual"></partial>
@@ -7,3 +18,45 @@
 <h1>@ViewData["Title"]</h1>
 <hr />
 <h5>Se refiere a las transacciones</h5>
+<h4>
+    <a asp-route-año="@añoAnterior"
+    class="btn-secondary btn"
+    ><i class="bi-chevron-left"></i></a>
+    @Model.Año
+    <a asp-route-año="@añoPosterior"
+    class="btn-secondary btn"
+    ><i class="bi-chevron-right"></i></a>
+</h4>
+
+
+<partial name="_ResumenTotales" model="resumenTotal" />
+
+<table class="table" style="font-size:20px">
+    <thead>
+        <tr style="background-color:lightblue">
+            <th>Mes</th>
+            <th style="text-align:right">Ingresos</th>
+            <th style="text-align:right">Gastos</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var transaccionPorMes in Model.TransaccionesTotalesPorMes)
+        {
+            <tr>
+                <td>
+                    <a style="text-decoration: none" asp-action="Semanal" 
+                    asp-route-año="@Model.Año" asp-route-mes="@transaccionPorMes.Mes">
+                        @transaccionPorMes.FechaReferencia.ToString("MMM")
+                    </a>               
+                </td>
+                <td class="activo" style="text-align:right">
+                    @transaccionPorMes.Ingresos
+                </td>
+                <td class="pasivo" style="text-align:right">
+                    @transaccionPorMes.Gastos
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

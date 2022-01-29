@@ -70,3 +70,7 @@ D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\obj\Debug\net6.0\es-ES\M
 D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\obj\Debug\net6.0\ManejoPresupuestoApp.Resources.Views.Home.Index.en-US.resources
 D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\obj\Debug\net6.0\ManejoPresupuestoApp.Resources.Views.Home.Index.es-ES.resources
 D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\obj\Debug\net6.0\scopedcss\Views\Shared\_ReporteTransaccionesDetalladas.cshtml.rz.scp.css
+D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\bin\Debug\net6.0\ClosedXML.dll
+D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\bin\Debug\net6.0\DocumentFormat.OpenXml.dll
+D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\bin\Debug\net6.0\ExcelNumberFormat.dll
+D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\bin\Debug\net6.0\System.IO.Packaging.dll
