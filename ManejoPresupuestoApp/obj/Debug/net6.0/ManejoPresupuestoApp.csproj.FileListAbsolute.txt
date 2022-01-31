@@ -74,3 +74,4 @@ D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\bin\Debug\net6.0\ClosedX
 D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\bin\Debug\net6.0\DocumentFormat.OpenXml.dll
 D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\bin\Debug\net6.0\ExcelNumberFormat.dll
 D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\bin\Debug\net6.0\System.IO.Packaging.dll
+D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\obj\Debug\net6.0\ManejoPresupuestoApp.Resources.Models.Usuario.es-ES.resources

@@ -1,0 +1,64 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ManejoPresupuestoApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/custom.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+</head>
+<body>
+    <header>
+        <div style="height:10vh">
+             <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container-fluid">
+                    <div class="navbar-collapse collapse d-sm-inline-flex" style="justify-content:flex-end">
+                        <partial name="_LinksLogin" />
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div style="margin:0">
+        <div style="display:flex; justify-content: center; align-items:center; height:80vh">
+            <div style="margin-right:5rem;">
+                   <h1>Manejo presupuesto</h1>
+                   <h4>Manejo del presupuesto de nuestras finanzas</h4>
+            </div>
+             <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>        
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+       $(function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const culture = urlParams.get('culture') ?? "";
+            
+            if (culture != "") {
+                 if (culture == "en-US") {
+                    $("#langSelect").val("EN");
+                 } else {
+                    $("#langSelect").val("ES");
+                 }
+            }
+       
+            $("#langSelect").change(function () {
+               var redirect = 
+                    $("#langSelect").val() == "EN" ? 
+                    "?culture=en-US" : "?culture=es-ES";
+                    window.location.href = redirect;
+            });
+       })
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

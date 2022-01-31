@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="~/css/custom.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ManejoPresupuestoApp.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css" />"
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css" />
 </head>
 <body>
     <header>
@@ -42,6 +42,7 @@
                             <option value="EN">Ingles</option>
                         </select>
                     </div>
+                    <partial name="_LinksLogin" />
                 </div>
             </div>
         </nav>
@@ -63,16 +64,14 @@
     <script src="~/lib/jquery-ui/jquery-ui.min.js"></script>
     <script type="text/javascript">
        $(function () {
-            var culture = 
-                 window.location.href.split("?").length > 1 ? 
-                 window.location.href.split("?")[1] : "";
+            const urlParams = new URLSearchParams(window.location.search);
+            const culture = urlParams.get('culture') ?? "";
             
             if (culture != "") {
-                 var lang = culture.split("=")[1];
-                 if (lang == "es-ES") {
-                    $("#langSelect").val("ES");
-                 } else {
+                 if (culture == "en-US") {
                     $("#langSelect").val("EN");
+                 } else {
+                    $("#langSelect").val("ES");
                  }
             }
        
