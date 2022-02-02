@@ -84,16 +84,26 @@ namespace ManejoPresupuestoApp.Controllers
             {
                 return View(model);
             }
-            var resultado = await _signInManager.PasswordSignInAsync
+
+            try{
+                var resultado = await _signInManager.PasswordSignInAsync
                 (model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
 
-            if (resultado.Succeeded)
-                return RedirectToAction("Index", "Transacciones");
-            else
+                if (resultado.Succeeded)
+                    return RedirectToAction("Index", "Transacciones");
+                else
+                {
+                    ModelState.AddModelError(String.Empty, "El usuario o password son incorrectos");
+                    return View(model);
+                }
+            }
+
+            catch (Exception e)
             {
-                ModelState.AddModelError(String.Empty, "El usuario o password son incorrectos");
+                ModelState.AddModelError(String.Empty, $"{e.Message}- {e.InnerException?.Message}");
                 return View(model);
             }
+            
         }
     }
 }

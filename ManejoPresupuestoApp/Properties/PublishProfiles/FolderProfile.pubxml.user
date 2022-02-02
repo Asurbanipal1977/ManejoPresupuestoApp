@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\000_Cursos\ManejoPresupuestoApp\ManejoPresupuestoApp\bin\Release\net6.0\publish\</_PublishTargetUrl>
+    <History>True|2022-02-02T01:00:29.6302327Z;False|2022-02-02T02:00:20.9597188+01:00;False|2022-02-02T01:45:09.2289442+01:00;True|2022-02-02T01:23:11.7660386+01:00;True|2022-02-02T00:43:38.2164831+01:00;</History>
+  </PropertyGroup>
+</Project>

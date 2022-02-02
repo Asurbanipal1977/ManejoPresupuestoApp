@@ -1,0 +1,33 @@
+#cuentas-accordion[b-xy07oywnlx]{
+    margin-bottom:50px;
+}
+
+#cuentas-accordion button[b-xy07oywnlx] {
+    color: black !important;
+    font-size: 18px;
+}
+
+    #cuentas-accordion button > span[b-xy07oywnlx] {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+.list-group-item p[b-xy07oywnlx] {
+    display: flex;
+}
+
+.list-group-item span[b-xy07oywnlx] {
+    width:100%;
+    padding: 10px;
+}
+
+
+.list-group-item span.der[b-xy07oywnlx] {
+    text-align:right;
+}
+
+.list-group-item span.izq[b-xy07oywnlx] {
+    text-align: left;
+}
+

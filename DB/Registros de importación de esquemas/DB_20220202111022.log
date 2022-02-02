@@ -1,0 +1,87 @@
+02/02/2022 12:10:22	Este registro contiene información acerca de la operación de importación de esquema en el proyecto 'DB' del equipo 'GIGABYTE-SABRE' por el usuario 'mame1'.
+02/02/2022 12:10:22	Se inició la importación del esquema de la base de datos.
+02/02/2022 12:10:29	Recopilando credenciales de la base de datos
+02/02/2022 12:10:29	Recopilando opciones de base de datos
+02/02/2022 12:10:29	Recopilando la opción de configuración de ámbito de la base de datos genérica
+02/02/2022 12:10:29	Recopilando usuarios
+02/02/2022 12:10:29	Recopilando roles
+02/02/2022 12:10:29	Recopilando roles de aplicación
+02/02/2022 12:10:29	Recopilando pertenencias a roles
+02/02/2022 12:10:29	Recopilando grupos de archivos
+02/02/2022 12:10:29	Recopilando catálogos de texto completo
+02/02/2022 12:10:29	Recopilando ensamblados
+02/02/2022 12:10:29	Recopilando certificados
+02/02/2022 12:10:29	Recopilando claves asimétricas
+02/02/2022 12:10:29	Recopilando claves simétricas
+02/02/2022 12:10:29	Recopilando claves simétricas cifradas
+02/02/2022 12:10:29	Recopilando esquemas
+02/02/2022 12:10:29	Recopilando colecciones de esquemas XML
+02/02/2022 12:10:29	Recopilando tipos de datos definidos por el usuario
+02/02/2022 12:10:29	Recopilando tipos definidos por el usuario
+02/02/2022 12:10:29	Recopilando tipos de tabla
+02/02/2022 12:10:29	Recopilando claves únicas para tipos de tabla
+02/02/2022 12:10:29	Recopilando claves principales para tipos de tabla
+02/02/2022 12:10:33	Recopilando índices para tipos de tablas
+02/02/2022 12:10:33	Recopilando restricciones CHECK para tipos de tabla
+02/02/2022 12:10:33	Recopilando restricciones DEFAULT para tipos de tabla
+02/02/2022 12:10:33	Recopilando funciones de partición
+02/02/2022 12:10:33	Recopilando esquemas de partición
+02/02/2022 12:10:33	Recopilando funciones
+02/02/2022 12:10:33	Recopilando funciones cifradas
+02/02/2022 12:10:33	Recopilando agregados
+02/02/2022 12:10:33	Recopilando procedimientos
+02/02/2022 12:10:33	Recopilando procedimientos cifrados
+02/02/2022 12:10:33	Recopilando tablas
+02/02/2022 12:10:33	Recopilando claves principales
+02/02/2022 12:10:33	Recopilando restricciones UNIQUE
+02/02/2022 12:10:33	Recopilando claves externas
+02/02/2022 12:10:33	Recopilando restricciones DEFAULT
+02/02/2022 12:10:33	Recopilando restricciones CHECK
+02/02/2022 12:10:33	Recopilando vistas
+02/02/2022 12:10:33	Recopilando vistas cifradas
+02/02/2022 12:10:33	Recopilando índices
+02/02/2022 12:10:33	Recopilando estadísticas
+02/02/2022 12:10:33	Recopilando listas de palabras irrelevantes de índices de texto completo
+02/02/2022 12:10:33	Recopilando listas de propiedades de búsqueda
+02/02/2022 12:10:33	Recopilando propiedades de búsqueda
+02/02/2022 12:10:33	Recopilando índices de texto completo
+02/02/2022 12:10:33	Recopilando índices de almacenamiento de columnas
+02/02/2022 12:10:33	Recopilando índices espaciales
+02/02/2022 12:10:33	Recopilando índices XML
+02/02/2022 12:10:33	Recopilando índices XML selectivos
+02/02/2022 12:10:33	Recopilando desencadenadores cifrados
+02/02/2022 12:10:33	Recopilando desencadenadores
+02/02/2022 12:10:33	Recopilando DDL triggers cifrados y de CLR
+02/02/2022 12:10:33	Recopilando DDL triggers
+02/02/2022 12:10:33	Creación de la restricción perimetral en curso
+02/02/2022 12:10:33	Recopilando sinónimos
+02/02/2022 12:10:33	Recopilando valores predeterminados
+02/02/2022 12:10:33	Recopilando enlaces UDDT de restricción de datos
+02/02/2022 12:10:33	Recopilando reglas
+02/02/2022 12:10:33	Recopilando enlaces UDDT de restricción de datos
+02/02/2022 12:10:33	Recopilando tipos de mensaje
+02/02/2022 12:10:33	Recopilando colas
+02/02/2022 12:10:33	Recopilando contratos
+02/02/2022 12:10:33	Recopilando servicios
+02/02/2022 12:10:33	Recopilando notificaciones de eventos
+02/02/2022 12:10:33	Recopilando enlaces de servicio remoto
+02/02/2022 12:10:33	Recopilando prioridades de Broker
+02/02/2022 12:10:33	Recopilando firmas
+02/02/2022 12:10:33	Recopilando opciones de compresión de datos
+02/02/2022 12:10:33	Recopilando tipos de secuencia
+02/02/2022 12:10:33	Recopilando directivas de seguridad
+02/02/2022 12:10:33	Recopilar claves de cifrado de columna
+02/02/2022 12:10:33	Recopilando claves maestras de columna
+02/02/2022 12:10:33	Recopilando orígenes de datos externos
+02/02/2022 12:10:33	Recopilando formatos de archivo externos
+02/02/2022 12:10:33	Recopilando tablas externas
+02/02/2022 12:10:33	Recopilando propiedades extendidas
+02/02/2022 12:10:34	Recopilando ensamblados
+02/02/2022 12:10:34	Recopilando credenciales
+02/02/2022 12:10:34	Recopilando inicios de sesión
+02/02/2022 12:10:34	Recopilando auditorías de servidor
+02/02/2022 12:10:35	Buscando elementos duplicados en el proyecto
+02/02/2022 12:10:36	Ha finalizado el procesamiento de los elementos duplicados
+02/02/2022 12:10:37	Finalizó la importación de la base de datos.
+02/02/2022 12:10:37	Se guardó un resumen de la importación en la siguiente ubicación: D:\000_Cursos\ManejoPresupuestoApp\DB\Registros de importación de esquemas\DB_20220202111022.log
+02/02/2022 12:10:37	Haga clic en Finalizar para continuar...
