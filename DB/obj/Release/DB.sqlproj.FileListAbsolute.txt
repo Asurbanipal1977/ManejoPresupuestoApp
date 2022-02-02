@@ -1,0 +1,9 @@
+D:\000_Cursos\ManejoPresupuestoApp\DB\bin\Release\DB.dacpac
+D:\000_Cursos\ManejoPresupuestoApp\DB\bin\Release\DB.dll
+D:\000_Cursos\ManejoPresupuestoApp\DB\bin\Release\DB.pdb
+D:\000_Cursos\ManejoPresupuestoApp\DB\obj\Release\Model.xml
+D:\000_Cursos\ManejoPresupuestoApp\DB\obj\Release\refactor.xml
+D:\000_Cursos\ManejoPresupuestoApp\DB\obj\Release\postdeploy.sql
+D:\000_Cursos\ManejoPresupuestoApp\DB\obj\Release\predeploy.sql
+D:\000_Cursos\ManejoPresupuestoApp\DB\obj\Release\DB.dll
+D:\000_Cursos\ManejoPresupuestoApp\DB\obj\Release\DB.pdb
